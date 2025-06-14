@@ -1,3 +1,7 @@
+import Footer from "./components/Footer";
+
+import Navbar from "./components/Navbar"; 
+
 type NewsItem = {
   _id: number;
   title: string;
@@ -17,9 +21,7 @@ export default async function Home() {
   
   return (
     <>
-      <div className="bg-red-500 p-5">
-        <div className="text-4xl font-bold">Balitabytes</div>
-      </div>
+    <Navbar />
       <div className="flex flex-col gap-2 justify-center items-center">
         <div className="text-2xl font-bold p-5">Welcome to Balitabytes</div>
         <div className="text-sm text-gray-500">Today's date is {new Date().toLocaleDateString()}</div>
@@ -31,7 +33,7 @@ export default async function Home() {
         </div>
       </div>
       {/* news component */}
-      <div className="p-5 flex gap-2">
+      <div className="p-5 flex gap-2 h-screen">
         {newsItems.map((newsItem) => (
           <div 
             key={newsItem._id} 
@@ -44,6 +46,7 @@ export default async function Home() {
           </div>  
         ))}
       </div>
+      <Footer />
     </>
   );
 }
