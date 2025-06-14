@@ -1,6 +1,6 @@
 # balitabytes
 
-In today's fast-paced world, staying informed shouldn't take hours. Balitabytes is your AI-powered news companion that brings you the most important Philippine news, summarized and ready to read in seconds.
+In today's fast-paced world, staying informed shouldn't take hours. Balitabytes is your AI-powered news app that brings you the most important Philippine news, summarized and ready to read in seconds.
 
 ## Why Balitabytes?
 
