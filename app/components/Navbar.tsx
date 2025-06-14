@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <div className="bg-red-500 p-5">
+    <div className="bg-red-500 p-5" >
     <div className="text-4xl font-bold">Balitabytes</div>
 
-    <ul>
+    <ul className='flex gap-2'>
     <Link href="/">Home</Link>
     <Link href="/about">About</Link>
  
