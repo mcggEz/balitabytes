@@ -1,11 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const page = () => {
   return (
 <>
 <Navbar />
-<div>This is the about page </div>
+<div className='flex flex-col gap-2 justify-center items-center h-screen'>This is the about page </div>
+<Footer />
 </>
   )
 }

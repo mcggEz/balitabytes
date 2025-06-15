@@ -1,6 +1,6 @@
 import Footer from "./components/Footer";
 
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";   
 
 type NewsItem = {
   _id: number;
@@ -23,10 +23,10 @@ export default async function Home() {
     <>
     <Navbar />
       <div className="flex flex-col gap-2 justify-center items-center">
-        <div className="text-2xl font-bold p-5">Welcome to Balitabytes</div>
-        <div className="text-sm text-gray-500">Today's date is {new Date().toLocaleDateString()}</div>
+
+        <div className="text-sm text-gray-500 pt-5">Today's date is {new Date().toLocaleDateString()}</div>
         <input type="date" />
-        <div>
+        <div className="flex gap-2">
           <input className="border-2 border-gray-300 rounded-md p-2" type="text" placeholder="So what news do you want to hear about" />
           
           <button className="bg-blue-500 text-white p-2 rounded-md">Search</button>
@@ -37,12 +37,13 @@ export default async function Home() {
         {newsItems.map((newsItem) => (
           <div 
             key={newsItem._id} 
-            className="bg-blue-200 p-5 h-50 w-50 rounded-md hover:bg-blue-300"
+            className="bg-blue-200 p-5 h-70 w-70 rounded-md hover:bg-blue-300"
           >
             <div>Title: {newsItem.title}</div>
             <div>Description: {newsItem.description}</div>
             <div>Image: {newsItem.imageUrl}</div>
-            <div>Link: <a href={newsItem.link}>{newsItem.link}</a></div>
+            <div><img src={newsItem.imageUrl} alt={newsItem.title} /></div>
+            <div>Reference: <a href={newsItem.link}>{newsItem.link}</a></div>
           </div>  
         ))}
       </div>
